@@ -13,7 +13,7 @@ const Weather = () => {
         const fetchData = async () => {
             setLoading(true);
             try {
-                const response = await axios.get(`https://sourabhweather.onrender.com/weather${pagination.currentPage}`);
+                const response = await axios.get(`https://sourabhweather.onrender.com/weather/${pagination.currentPage}`);
                 setWeather(response.data);
                 setPagination({...pagination,totalPages:3});
             } catch (err) {
